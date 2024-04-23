@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-right: 2em;
+    margin-left: 2em;   
+}
+
+h1,h2,h3{
+    text-align: center;
+    padding: 0.5em;
+   
+}
+p{
+    padding: 1em;
+    height: 100%;
+    text-align: start;
+}
+
+.explain_transition{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5em;
+    padding: 1em;
+}
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
+}
+
+.animation{
+    padding: 2em;
+}
+
+
+/* Transition should be defined on parent element */
+/* transition : diffrerent tanstion time for different properties */
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 3em;
+    width: 9em;
+    border: none;
+  }
+
+
+.btransition{
+    background-color: white;
+    border: 1px solid brown;
+    color: brown;
+    transition: color 2s, font-size 1s; /* fifferent transition timig for different properties */
+}
+
+.btransition:hover{
+    color: white;
+    background-color: brown;
+    font-size: 18px;
+}
+
+
+.btransition2{
+    background-color: brown;
+    transition: all 0.5s; /* same timeing for all transition */
+}
+
+.btransition2:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+}
+
+
+.btransition3{
+    background-color: brown;
+    transition: all 0.2s;
+    transition-delay: 1s; /* Transition delay on 1s */
+ 
+}
+
+.btransition3:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+}
+
+
+.btransition4{
+    background-color: brown;
+    transition: all 0.5s;
+    transition-property: width;
+    transition-duration: 0.5s; /* Transition delay on 1s */
+ 
+}
+
+.btransition4:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 10em;
+}
+
+
+.btransition5{
+    background-color: brown;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease; /* trasnsition timing functions slow start than fast than slow end */
+ 
+}
+
+.btransition5:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 11em;
+}
+
+
+.btransition6{
+    background-color: brown;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: linear; /* trasnsition timing functions same speed from start to end */
+ 
+}
+
+.btransition6:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 11em;
+}
+
+
+.btransition7{
+    background-color: brown;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in; /* trasnsition timing functions slow start*/
+ 
+}
+.btransition7:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 11em;
+}
+
+
+
+.btransition8{
+    background-color: brown;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out; /* trasnsition timing functions slow end*/
+    width: 11em;
+ 
+}
+.btransition8:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 13em;
+}
+
+
+.btransition9{
+    background-color: brown;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out; /* trasnsition timing functions slow start and end */
+    width: 11em;
+ 
+}
+
+.btransition9:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 13em;
+}
+
+.btransition10{
+    background-color: brown;
+    transition: width 0.5s ease-in-out 0.7s;
+}
+
+.btransition10:hover{
+    color: brown;
+    background-color: white;
+    border: 1px solid brown;
+    width: 13em;
+}
+
+
+/* Transtion: same transition for all properties */
+
+
+
+/* media query */
+@media screen and (max-width: 768px) {
+   .explain_transition{
+    grid-template-columns: 1fr
+   }
+}
