@@ -13,13 +13,14 @@ h1,h2,h3{
     padding: 0.5em;
    
 }
-p{
+.transition p{
     padding: 1em;
     height: 100%;
     text-align: start;
 }
 
-.explain_transition{
+/* Transition */
+.explain_transition, .explainAnimation{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1.5em;
@@ -38,9 +39,6 @@ p{
     box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
 }
 
-.animation{
-    padding: 2em;
-}
 
 
 /* Transition should be defined on parent element */
@@ -210,14 +208,92 @@ p{
     width: 13em;
 }
 
+/*animation  */
+.animation{
+    padding: 2em;
+}
 
-/* Transtion: same transition for all properties */
+.twoProperty{
+    display: flex;
+    gap: 1em;
+}
+
+.twoProperty> div{
+    background-color: brown;
+    margin-top: 1em;
+    padding: 1em;
+ 
+}
+
+.animationProperty{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1em;
+}
+.animationProperty>div{
+    padding: 1em;
+    box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
+    margin-top: 1em;
+}
+
+.abox{
+    display: flex;
+    box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.26);
+    padding: 1em;
+    flex-direction:column;
+}
+.anibox{
+    width: 80px;
+    height:100px;
+    background-color: brown;
+    padding:1em;
+    opacity: 90%;
+}
+.content{
+    margin-top: 1em;
+}
+
+.a1{
+    animation-name: grow;
+    animation-duration: 2s;
+}
+
+.a2{
+    animation: shrinkGrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    
+}
+
+
+@keyframes grow{
+    from{width: 80px; height: 100px;}
+    to{width: 320px; opacity: 100%; background-color: rebeccapurple;}
+}
+
+@keyframes shrinkGrow {
+    20%{border: 2px solid black; }
+    50%{border-radius: 50%;}
+    55%{background-color: burlywood;}
+    80%{background-color: brown; }
+    100%{border-radius: 100%;}
+
+}
+
 
 
 
 /* media query */
 @media screen and (max-width: 768px) {
-   .explain_transition{
+   .explain_transition, .explainAnimation, .animationProperty{
     grid-template-columns: 1fr
    }
+
+   .twoProperty{
+    flex-direction: column;
+   }
+
+   
 }

@@ -99,6 +99,101 @@
     <div class="animation">
         <h2>Animation</h2>
         <h3>In this section we will be learning about keyframes and animation properties of css</h3>
+        <div class="twoProperty">
+            <div class="p1">
+                <h3>From to: You can use this properto to define a starting point and a end point
+                <br>
+                <em>@keyframe grow{ <br>
+                    From{
+                        width:20px
+                    }
+                    <br>to{
+                        width:100px
+                    } </em>
+                </h3>
+            </div>
+            <div class="p2"><h3> % : You can also define different animations for different % for an element
+                <br><em>
+                    @keyframe grow{ <br>
+                        0%{
+                            width:20px
+                        }
+                        <br>10% {width:30px}
+                        <br>25% {width:45px}
+                        <br>50% {width:50px}
+                        <br>100% {width:100px}
+
+                </em>
+            </h3></div>
+            <div class="p3">
+        </div>
+        </div>
+        <div class="animationProperty">
+            <div class="ap1">
+                <h4>Animation-name:</h4>
+                <p>The name of the thransition defined in the <em>@keyframe</em></p>
+            </div>
+            <div class="ap2">
+                <h4>Animation-duration:</h4>
+                <p>Sets the duration for the animation. <em>animation-duration:4s</em> which means it will take 4 second to complete the animation.</p>
+            </div>
+            <div class="ap3">
+                <h4>Animation-delay:</h4>
+                <p>Sets the delay to start the animation</p>
+            </div>
+            <div class="ap4">
+                <h4>Animation-iteration:</h4>
+                <p>Set the iteration for animation
+                   values:
+                   <li>Infinite: animation runs infinite number of times</li> 
+                </p>
+            </div>
+            <div class="ap5"><h4>Animation-timing-function:</h4>
+            <p>Sets the timing function for animation <br>
+            values:
+              <li>Ease</li>
+              <li>Ease-in</li>
+              <li>Ease-out</li>
+              <li>Ease-in-out</li>
+              <li>linear</li>
+            </p>
+            </div>
+            <div class="ap6"><h4>Animation-direction:</h4>
+             <p> Determines whether the animation should play forwards, backwards, or alternate between forwards and backwards on each iteration.</p>
+            </div>
+            <div class="ap7">
+                <h4>Animation-fill-mode:</h4>
+                <p> Defines what styles are applied to the element before and after the animation. values include:
+                    <li>none</li>
+                    <li>forward</li>
+                    <li>Backward</li>
+                </p>
+            </div>
+        </div>
+        <div class="explainAnimation">
+            <div class="box11 abox">
+                <div class=" a1 anibox"></div>
+                <div class="content">
+                     <code class="code1">@keyframes grow{
+                    <br> from{width: 80px; height: 100px;} <br>
+                    to{width: 320px; opacity: 100%; background-color: rebeccapurple;}
+                <br>}<br></code>
+
+                <code class="code2">
+                    .box{ <br>
+                        animation-name: grow;
+                        animation-duration: 2s;<br>
+                    }
+                </code>
+                </div>
+            </div>
+            <div class="box12 abox">
+                <div class=" a2 anibox"></div>
+                <div class="content">
+                    <h4>%</h4>
+                </div>
+            </div>
+        </div>
 
     </div>
 
