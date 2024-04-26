@@ -101,32 +101,41 @@
         <h3>In this section we will be learning about keyframes and animation properties of css</h3>
         <div class="twoProperty">
             <div class="p1">
-                <h3>From to: You can use this properto to define a starting point and a end point
-                <br>
-                <em>@keyframe grow{ <br>
-                    From{
-                        width:20px
-                    }
-                    <br>to{
-                        width:100px
-                    } </em>
-                </h3>
-            </div>
-            <div class="p2"><h3> % : You can also define different animations for different % for an element
-                <br><em>
-                    @keyframe grow{ <br>
-                        0%{
-                            width:20px
+                <div class="p_title">
+                    <h3>From to: You can use this properto to define a starting point and a end point
+                    </h3>
+                </div>
+                
+                <div class="p_box">
+                    <code>
+                        @keyframe animationName { <br>
+                             from{} <br>
+                             to{} <br>
                         }
-                        <br>10% {width:30px}
-                        <br>25% {width:45px}
-                        <br>50% {width:50px}
-                        <br>100% {width:100px}
-
-                </em>
-            </h3></div>
-            <div class="p3">
-        </div>
+                    </code>
+                </div>
+             
+            </div>
+            <div class="p2">
+                <div class="p_title">
+                    <h3> % : You can also define different animations for different % for an element  
+                    </h3>
+                </div>
+          
+            <div class="p_box">
+                <code>
+                    @keyframe animationName{ <br>
+                        10%{   } <br> 
+                        40%{   } <br> 
+                        80%{   } <br> 
+                        100%{   } <br> 
+    
+                    }
+                   </code>
+            </div>
+            
+            </div>
+           
         </div>
         <div class="animationProperty">
             <div class="ap1">
@@ -170,6 +179,7 @@
                 </p>
             </div>
         </div>
+
         <div class="explainAnimation">
             <div class="box11 abox">
                 <div class=" a1 anibox"></div>
@@ -181,7 +191,7 @@
 
                 <code class="code2">
                     .box{ <br>
-                        animation-name: grow;
+                        animation-name: grow;,<br>
                         animation-duration: 2s;<br>
                     }
                 </code>
@@ -190,15 +200,65 @@
             <div class="box12 abox">
                 <div class=" a2 anibox"></div>
                 <div class="content">
-                    <h4>%</h4>
+                    <code>@keyframes toCircle { <br>
+                        20%{border: 2px solid black; } <br>
+                        50%{border-radius: 50%;} <br>
+                        55%{background-color: burlywood;} <br>
+                        80%{background-color: brown; } <br>
+                        100%{border-radius: 100%;} <br>
+                    }<br></code>
+                    <code>
+                        .box{ <br>
+                            animation: toCircle; <br>
+                            animation-duration: 2s; <br>
+                            animation-iteration-count: infinite; <br>
+                            animation-direction: alternate; <br>
+                            animation-timing-function: ease-in; <br>
+                            
+                        } <br>
+                    </code>
+                </div>
+            </div>
+            <div class="box13 abox">
+                <div class=" a3 anibox"></div>
+                <div class="content">
+                    <h3>Short-hand property</h3>
+                    <code>
+                        .box{ <br>
+                            animation: name duration timing-function delay iteration-count direction fill-mode; <br>
+                            
+                        } <br>
+                        .box{ <br>
+                            animation: growShrink 3s ease-in none infinite alternate ; <br>
+                            
+                        } <br>
+                    
+                    </code>
                 </div>
             </div>
         </div>
 
-    </div>
+    </div> 
+    
+    <div class="transform">
+        <h2>Transform Property</h2>
+        <h3>Applies 2D or 3D transformation to an element.</h3>
 
-   
-        
+        <div class="translate">
+            <div class="t_box1">
+                <div class="t-element"></div>
+                <div class="t-content"></div>      
+            </div>
+            <div class="t_box2">
+                <div class="t-element"></div>
+                <div class="t-content"></div> 
+            </div>
+            <div class="t_box3">
+                <div class="t-element"></div>
+                <div class="t-content"></div> 
+            </div>
+        </div>
+    </div>
  
 </body>
 </html>
