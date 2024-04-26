@@ -5,7 +5,8 @@
 }
 body{
     margin-right: 2em;
-    margin-left: 2em;   
+    margin-left: 2em;  
+    background-color: #d3d3d3; 
 }
 
 h1,h2,h3{
@@ -37,6 +38,7 @@ h1,h2,h3{
     height: 100%;
     text-align: center;
     box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
+    background-color: #EDEADE;
 }
 
 
@@ -225,6 +227,7 @@ h1,h2,h3{
     display: flex;
     gap: 10px;
     box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
+    background-color: #EDEADE;
     
 }
 
@@ -253,6 +256,7 @@ h1,h2,h3{
     padding: 1em;
     box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
     margin-top: 1em;
+    background-color: #EDEADE;
 }
 
 .abox{
@@ -270,8 +274,12 @@ h1,h2,h3{
 }
 .content{
     margin-top: 1em;
+    background-color: #EDEADE;
 }
 
+.explainAnimation >div{
+    background-color: #EDEADE;
+}
 /* Animation applied to elements */
 .a1{
     animation-name: grow;
@@ -314,11 +322,134 @@ h1,h2,h3{
 }
 
 
+/* Translate */
+.translate{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
+.translate>div{
+    box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
+    width: 100%;
+    background-color: #EDEADE;
+}
 
+.t_box{
+    height: 200px;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.t-content{
+    
+    box-shadow: 10px 10px 36px 0px rgba(0,0,0,0.26);
+   
+}
+
+.t-content p{
+    padding: 1em;
+}
+.t-element{
+    width: 80%;
+}
+
+.translate-box{
+    width: 70px;
+    height: 70px;
+    background-color: brown;
+    border-radius: 50%;
+}
+
+.t_box1 .t-element{
+    display: flex;
+    justify-content: center;
+}
+.centerIt{
+    display: flex;
+    align-items: center;
+}
+
+.translateY{
+    animation: vertical 1s ease none infinite alternate;
+}
+
+.translateX{
+    animation: horizontal 1s ease none infinite alternate;
+}
+
+.translateXY{
+    animation: combined 2s ease none infinite alternate ;
+}
+
+.scaleY{
+    animation: scaleVetical 2s ease none infinite ;
+}
+.scaleX{
+    animation: scaleHorizontal 2s ease none infinite alternate;
+}
+
+.scaleXY{
+    animation: scaleCombine 2s ease none infinite alternate;
+}
+.rotate{
+    animation: rotate 2s ease none infinite;
+}
+
+.skewY{
+    animation: skewVertical 2s ease none infinite alternate ;
+}
+.skewX{
+    animation: skewHorizontal 2s ease none infinite alternate ;
+}
+
+@keyframes vertical {
+    from{transform: translateY(100px);}
+    to{transform: translateY(-19px);}
+}
+
+@keyframes horizontal {
+    from{transform: translateX(130px);}
+    to{transform: translateX(-10px);}
+}
+@keyframes combined {
+    100%{transform: translate(70px,80px);}
+}
+
+@keyframes scaleVetical {
+    from{ border-radius: 0;}
+    to{transform: scaleY(2) translateX(75px); }
+}
+
+@keyframes scaleHorizontal {
+    from{ border-radius: 0;}
+    to{transform: scalex(2) translateX(45px); border-radius: 0; }
+}
+
+@keyframes scaleCombine {
+    from{border-radius: 0;}
+    to{transform:scale(2,2.5) translate(20px); background-color: #04AA6D; border-radius: 0; }
+}
+
+@keyframes rotate {
+    0%{border-radius: 0;}
+    50%{transform: translateX(75px)  ;}
+    100%{ transform: rotate(-90deg); border-radius: 0;}
+    
+}
+
+@keyframes skewVertical {
+    from{ border-radius: 0;}
+    to{transform: skewY(30deg) translateX(75px); border-radius: 0; }
+}
+@keyframes skewHorizontal {
+    from{ border-radius: 0;}
+    to{transform: skewX(30deg) translateX(75px); border-radius: 0; }
+}
 
 /* media query */
 @media screen and (max-width: 768px) {
-   .explain_transition, .explainAnimation, .animationProperty{
+   .explain_transition, .explainAnimation, .animationProperty, .translate{
     grid-template-columns: 1fr
    }
 
