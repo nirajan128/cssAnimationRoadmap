@@ -20,6 +20,10 @@ h1,h2,h3{
     text-align: start;
 }
 
+footer{
+    text-align: center;
+    margin-top: 1em;
+}
 /* Transition */
 .explain_transition, .explainAnimation{
     display: grid;
